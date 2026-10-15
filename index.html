@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="HustlePilot AI helps freelancers create client proposals, product listings, marketing copy and pricing estimates.">
+    <meta name="theme-color" content="#10131d">
+    <title>HustlePilot AI — Work smarter. Earn better.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <a href="#" class="brand">
+                <span class="brand-mark">H<span>✳</span></span>
+                <span>HustlePilot<span class="brand-ai"> AI</span></span>
+            </a>
+
+            <div class="workspace-label">WORKSPACE</div>
+            <nav class="navigation" aria-label="Main navigation">
+                <button class="nav-item active" data-view="dashboard">
+                    <span>⌂</span> Dashboard
+                </button>
+                <button class="nav-item" data-view="proposal">
+                    <span>✎</span> Client proposals
+                </button>
+                <button class="nav-item" data-view="product">
+                    <span>◇</span> Product listings
+                </button>
+                <button class="nav-item" data-view="marketing">
+                    <span>↗</span> Marketing copy
+                </button>
+                <button class="nav-item" data-view="pricing">
+                    <span>₹</span> Pricing assistant
+                </button>
+            </nav>
+
+            <div class="sidebar-spacer"></div>
+
+            <div class="local-card">
+                <div class="local-icon">⬡</div>
+                <div>
+                    <strong>Privacy-first AI</strong>
+                    <p id="sidebarAiStatus">Demo mode active</p>
+                </div>
+                <span class="status-dot" id="sidebarDot"></span>
+            </div>
+
+            <div class="sidebar-footer">
+                <span class="avatar">HP</span>
+                <div class="profile-copy">
+                    <strong>Independent Creator</strong>
+                    <span>Free workspace</span>
+                </div>
+                <span class="muted">✦</span>
+            </div>
+        </aside>
+
+        <main class="main-area">
+            <header class="topbar">
+                <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+                <div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumbTitle">Dashboard</strong></div>
+                <div class="topbar-right">
+                    <span class="privacy-pill"><span class="tiny-dot"></span> Privacy-first</span>
+                    <button class="button button-outline button-small" id="settingsButton">⚙ Settings</button>
+                </div>
+            </header>
+
+            <div class="content">
+                <section id="dashboardView" class="view">
+                    <div class="welcome-row">
+                        <div>
+                            <div class="eyebrow"><span class="sparkle">✳</span> YOUR BUSINESS, ON AUTOPILOT</div>
+                            <h1>Make time for the work<br class="desktop-break"> <span class="gradient-text">that
+                                    pays.</span></h1>
+                            <p class="hero-subtitle">Less busywork. Better clients. More room to grow your hustle.</p>
+                        </div>
+                        <div class="hero-badge"><span>✦</span> Built for independent work</div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <article class="stat-card">
+                            <div class="stat-top"><span>Writing tools</span><span class="stat-icon purple">✎</span>
+                            </div>
+                            <div class="stat-number">03</div>
+                            <p>Ready-to-use content workflows</p>
+                        </article>
+                        <article class="stat-card">
+                            <div class="stat-top"><span>Pricing calculator</span><span class="stat-icon green">₹</span>
+                            </div>
+                            <div class="stat-number">01</div>
+                            <p>Estimate a fair project price</p>
+                        </article>
+                        <article class="stat-card">
+                            <div class="stat-top"><span>AI mode</span><span class="stat-icon orange">⬡</span></div>
+                            <div class="stat-number small-stat" id="modeStat">Demo</div>
+                            <p id="modeDescription">Works without an AI server</p>
+                        </article>
+                    </div>
+
+                    <div class="section-heading">
+                        <div>
+                            <h2>Your hustle toolkit</h2>
+                            <p>Pick a task. Let the busywork begin to disappear.</p>
+                        </div>
+                        <span class="section-count">04 TOOLS</span>
+                    </div>
+
+                    <div class="tool-grid">
+                        <button class="tool-card" data-view="proposal">
+                            <span class="tool-icon icon-purple">✎</span>
+                            <span class="tool-tag">CLIENT WORK</span>
+                            <strong>Proposal Writer</strong>
+                            <p>Turn client requirements into a clear, persuasive project proposal.</p>
+                            <span class="tool-link">Create a proposal <span>↗</span></span>
+                        </button>
+                        <button class="tool-card" data-view="product">
+                            <span class="tool-icon icon-blue">◇</span>
+                            <span class="tool-tag">ONLINE SELLING</span>
+                            <strong>Product Listing</strong>
+                            <p>Write descriptions that explain value and make products stand out.</p>
+                            <span class="tool-link">Write a listing <span>↗</span></span>
+                        </button>
+                        <button class="tool-card" data-view="marketing">
+                            <span class="tool-icon icon-orange">↗</span>
+                            <span class="tool-tag">GROW YOUR BRAND</span>
+                            <strong>Marketing Copy</strong>
+                            <p>Create social posts, promotional captions and calls to action.</p>
+                            <span class="tool-link">Create marketing copy <span>↗</span></span>
+                        </button>
+                        <button class="tool-card" data-view="pricing">
+                            <span class="tool-icon icon-green">₹</span>
+                            <span class="tool-tag">GET PAID FAIRLY</span>
+                            <strong>Pricing Assistant</strong>
+                            <p>Estimate a project price from hours, costs and your desired margin.</p>
+                            <span class="tool-link">Calculate a price <span>↗</span></span>
+                        </button>
+                    </div>
+
+                    <div class="bottom-banner">
+                        <div class="banner-symbol">⬡</div>
+                        <div class="banner-copy">
+                            <strong>Your work. Your data. Your choice.</strong>
+                            <p>Connect a local Ollama model to generate content on your own computer.</p>
+                        </div>
+                        <button class="button button-light" id="connectBanner">Configure local AI
+                            <span>→</span></button>
+                    </div>
+                    <p class="disclaimer">HustlePilot AI is an independent productivity prototype. AI output and pricing
+                        estimates should be reviewed before use.</p>
+                </section>
+
+                <section id="workspaceView" class="view hidden">
+                    <div class="workspace-header">
+                        <button class="back-link" id="backButton">← Dashboard</button>
+                        <div class="eyebrow" id="workspaceEyebrow">YOUR BUSINESS TOOLKIT</div>
+                        <h1 id="workspaceTitle">Proposal Writer</h1>
+                        <p id="workspaceDescription">Create professional content in less time.</p>
+                    </div>
+
+                    <div class="workspace-grid">
+                        <form class="panel input-panel" id="generatorForm">
+                            <div class="panel-heading">
+                                <div><span class="panel-kicker">STEP 01</span>
+                                    <h2>Tell us what you need</h2>
+                                </div>
+                                <span class="panel-icon">✳</span>
+                            </div>
+                            <label for="businessName">Your business or brand <span
+                                    class="optional">OPTIONAL</span></label>
+                            <input id="businessName" name="businessName" placeholder="e.g. PixelCraft Studio"
+                                maxlength="100">
+
+                            <label for="targetAudience">Who is this for?</label>
+                            <input id="targetAudience" name="targetAudience" placeholder="e.g. A local restaurant owner"
+                                maxlength="180" required>
+
+                            <label for="projectDetails" id="detailsLabel">Describe your project</label>
+                            <textarea id="projectDetails" name="projectDetails" rows="6" maxlength="4000"
+                                placeholder="Explain the project, product or service. Include useful details..."
+                                required></textarea>
+                            <div class="field-meta"><span>More context = more useful results</span><span
+                                    id="characterCount">0 / 4000</span></div>
+
+                            <div class="two-fields">
+                                <div>
+                                    <label for="tone">Writing style</label>
+                                    <select id="tone" name="tone">
+                                        <option value="Professional">Professional</option>
+                                        <option value="Friendly">Friendly</option>
+                                        <option value="Persuasive">Persuasive</option>
+                                        <option value="Creative">Creative</option>
+                                        <option value="Minimal">Short and direct</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="length">Output length</label>
+                                    <select id="length" name="length">
+                                        <option value="Balanced">Balanced</option>
+                                        <option value="Short">Short</option>
+                                        <option value="Detailed">Detailed</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-error hidden" id="formError" role="alert"></div>
+                            <button class="button button-primary generate-button" type="submit" id="generateButton">
+                                <span>✳</span> Generate with HustlePilot <span class="button-arrow">→</span>
+                            </button>
+                            <p class="form-note">Your content is processed in your browser in demo mode. Local AI
+                                requires a configured Ollama server.</p>
+                        </form>
+
+                        <section class="panel output-panel" aria-live="polite">
+                            <div class="output-top">
+                                <div><span class="panel-kicker">STEP 02</span>
+                                    <h2>Your result</h2>
+                                </div>
+                                <span class="result-status" id="resultStatus">AWAITING INPUT</span>
+                            </div>
+                            <div id="emptyOutput" class="empty-output">
+                                <div class="empty-art"><span>✳</span><i></i><b></b></div>
+                                <h3>Your next great idea starts here.</h3>
+                                <p>Fill in the details and generate your first draft. Your content will appear right
+                                    here.</p>
+                                <div class="empty-tips"><span>✦</span> No complicated prompts needed</div>
+                                <div class="empty-tips"><span>✦</span> Edit and copy your result anytime</div>
+                            </div>
+                            <div id="loadingOutput" class="loading-output hidden">
+                                <div class="loader"></div>
+                                <h3>Working on your draft...</h3>
+                                <p>Turning your brief into something useful.</p>
+                            </div>
+                            <div id="resultOutput" class="result-output hidden">
+                                <div class="result-meta"><span class="result-type" id="resultType">PROPOSAL</span><span
+                                        id="resultMode">DEMO MODE</span></div>
+                                <div class="result-text" id="resultText"></div>
+                                <div class="result-actions">
+                                    <button class="button button-primary" id="copyButton">▣ Copy text</button>
+                                    <button class="button button-outline" id="downloadButton">↓ Download .txt</button>
+                                </div>
+                                <p class="result-footnote">Review the details and personalize this draft before sending
+                                    it to a client.</p>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section id="settingsView" class="view hidden">
+                    <div class="workspace-header">
+                        <button class="back-link" id="settingsBackButton">← Dashboard</button>
+                        <div class="eyebrow">PRIVACY & CONFIGURATION</div>
+                        <h1>Local AI settings</h1>
+                        <p>Choose how HustlePilot generates your content.</p>
+                    </div>
+                    <div class="panel settings-panel">
+                        <div class="settings-intro">
+                            <span class="tool-icon icon-green">⬡</span>
+                            <div>
+                                <h2>Connect Ollama</h2>
+                                <p>Ollama lets you run compatible open-weight models on your own computer.</p>
+                            </div>
+                        </div>
+                        <div class="settings-callout"><strong>Local does not mean automatic.</strong>
+                            <p>You must install and start Ollama, download a model, and allow your browser to connect to
+                                its API. No cloud AI provider is used by this project.</p>
+                        </div>
+                        <label for="ollamaUrl">Ollama API address</label>
+                        <input id="ollamaUrl" type="url" value="http://localhost:11434"
+                            placeholder="http://localhost:11434">
+                        <label for="modelName">Model name</label>
+                        <input id="modelName" type="text" value="qwen2.5:3b" placeholder="e.g. qwen2.5:3b">
+                        <p class="settings-help">Use a model you have already pulled with Ollama. Model names and
+                            hardware requirements vary.</p>
+                        <div class="settings-actions">
+                            <button class="button button-primary" id="saveSettings">Save settings</button>
+                            <button class="button button-outline" id="testConnection">Test connection</button>
+                        </div>
+                        <div id="connectionMessage" class="connection-message" role="status">Demo mode is ready.
+                            Configure Ollama when you want local model inference.</div>
+                        <div class="divider-line"></div>
+                        <h3>How to enable local AI</h3>
+                        <ol class="setup-steps">
+                            <li>Install Ollama from <a href="https://ollama.com/" target="_blank"
+                                    rel="noopener noreferrer">ollama.com</a>.</li>
+                            <li>Open a terminal and run <code>ollama pull qwen2.5:3b</code>.</li>
+                            <li>Start Ollama and confirm its API is reachable at the configured address.</li>
+                            <li>If the browser blocks the request, configure Ollama's allowed origins for your app's
+                                origin, then restart Ollama. Do not expose the API publicly.</li>
+                            <li>Test the connection above and generate content.</li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
